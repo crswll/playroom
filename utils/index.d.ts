@@ -2,6 +2,7 @@ interface Snippet {
   group: string;
   name: string;
   code: string;
+  img?: string;
 }
 
 type Snippets = Snippet[];

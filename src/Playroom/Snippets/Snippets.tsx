@@ -122,7 +122,7 @@ export default ({ snippets, onHighlight, onClose }: Props) => {
             const { value } = e.currentTarget;
             setSearchTerm(value);
           }}
-          placeholder="Find a snippet..."
+          placeholder="Find a pattern..."
           onBlur={() => {
             setHighlightedIndex(null);
           }}
@@ -188,6 +188,12 @@ export default ({ snippets, onHighlight, onClose }: Props) => {
               <Text size="large">
                 <Strong>{snippet.group}</Strong>
                 <span className={styles.snippetName}>{snippet.name}</span>
+                {snippet.img && (
+                  <img
+                    style={{ width: '100%', height: 'auto', marginTop: 5 }}
+                    src={snippet.img}
+                  />
+                )}
               </Text>
             </li>
           );
